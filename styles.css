@@ -1,0 +1,160 @@
+:root {
+  --bg: #fbfaf8;
+  --bg-alt: #f2f0ec;
+  --text: #1c1b19;
+  --text-muted: #635f58;
+  --accent: #3a6b52;
+  --accent-alt: #7c9885;
+  --border: #e4e0d8;
+  --card-bg: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #14140f;
+    --bg-alt: #1c1b17;
+    --text: #f2f0ec;
+    --text-muted: #a8a398;
+    --accent: #8fc9a5;
+    --accent-alt: #5f8f74;
+    --border: #2c2a24;
+    --card-bg: #1c1b17;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.55;
+}
+
+.wrap {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+a { color: var(--accent); }
+
+.site-header {
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  z-index: 10;
+}
+
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 16px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.brand { font-weight: 700; font-size: 1.05rem; }
+
+.site-header nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.site-header nav a:hover { color: var(--accent); }
+
+.hero {
+  padding-block: 72px 56px;
+}
+
+.hero h1 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  line-height: 1.2;
+  margin: 0 0 16px;
+}
+
+.hero-sub {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  max-width: 60ch;
+  margin: 0 0 28px;
+}
+
+.hero-links { display: flex; gap: 12px; flex-wrap: wrap; }
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  text-decoration: none;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.btn-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.projects, .about, .contact {
+  padding-block: 48px;
+  border-top: 1px solid var(--border);
+}
+
+.projects h2, .about h2, .contact h2 {
+  font-size: 1.5rem;
+  margin-bottom: 28px;
+}
+
+.project {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 20px;
+}
+
+.project-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.project-header h3 { margin: 0; font-size: 1.15rem; }
+
+.tag {
+  font-size: 0.78rem;
+  color: var(--accent);
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 3px 10px;
+  white-space: nowrap;
+}
+
+.project p { margin: 0 0 12px; }
+.project-detail { color: var(--text-muted); font-size: 0.95rem; }
+
+.project-links { display: flex; gap: 16px; margin-top: 14px; font-size: 0.92rem; }
+.project-links a { text-decoration: none; font-weight: 600; }
+.project-links a:hover { text-decoration: underline; }
+.muted { color: var(--text-muted); font-size: 0.9rem; }
+
+.about p { color: var(--text-muted); max-width: 65ch; }
+
+.contact {
+  padding-block: 48px 64px;
+}
+
+.footer-links a { margin-right: 18px; text-decoration: none; }
+.footer-links a:hover { text-decoration: underline; }
