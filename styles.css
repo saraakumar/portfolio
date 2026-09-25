@@ -55,6 +55,13 @@ a { color: var(--accent); }
 
 .site-header nav a:hover { color: var(--accent); }
 
+.tab-link.active {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.page[hidden] { display: none; }
+
 .hero {
   padding-block: 72px 56px;
 }
