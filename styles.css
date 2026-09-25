@@ -1,12 +1,12 @@
 :root {
-  --bg: #faf6ef;
+  --bg: #f8efd9;
   --bg-alt: #f0eefa;
   --text: #2b2a35;
   --text-muted: #6c6879;
   --accent: #6c63ac;
   --accent-alt: #5b83c4;
-  --border: #e6e0f2;
-  --card-bg: #fffdf8;
+  --border: #e8ddc2;
+  --card-bg: #fffcf3;
 }
 
 @media (prefers-color-scheme: dark) {
