@@ -23,8 +23,8 @@
 
 <section id="home" class="page hero">
   <div class="wrap">
-    <h1>I build software that turns messy real-world input into useful, working tools.</h1>
-    <p class="hero-sub">Software engineer focused on AI-powered products, backend pipelines, and shipping things real users depend on.</p>
+    <h1 data-editable>I build software that turns messy real-world input into useful, working tools.</h1>
+    <p class="hero-sub" data-editable>Software engineer focused on AI-powered products, backend pipelines, and shipping things real users depend on.</p>
     <div class="hero-links">
       <a class="btn btn-primary" href="#projects" data-tab="projects">See my work</a>
       <a class="btn" href="mailto:saraakumar06@gmail.com">Get in touch</a>
@@ -36,14 +36,14 @@
   <div class="wrap profile-wrap">
     <div class="avatar" aria-hidden="true">SK</div>
     <div class="profile-body">
-      <h2>Profile</h2>
-      <p>
+      <h2 data-editable>Profile</h2>
+      <p data-editable>
         I like projects where the hard part isn't the demo, it's making something work reliably on real,
         messy data — whether that's estimating calories from a photo, catching duplicate names across a
         spreadsheet, or getting a signed app past a client's security policy. I write tests and eval
         harnesses for the same reason: so "it works" means something.
       </p>
-      <ul class="skills">
+      <ul class="skills" data-editable>
         <li>Python</li>
         <li>Flask</li>
         <li>Gemini API</li>
@@ -60,19 +60,19 @@
 
 <section id="projects" class="page projects">
   <div class="wrap">
-    <h2>Projects</h2>
+    <h2 data-editable>Projects</h2>
 
     <article class="project">
       <div class="project-header">
-        <h3>SnapTrack</h3>
-        <span class="tag">AI · Flask · Gemini</span>
+        <h3 data-editable>SnapTrack</h3>
+        <span class="tag" data-editable>AI · Flask · Gemini</span>
       </div>
-      <p>
+      <p data-editable>
         An AI nutrition tracker: take a photo of a meal, and Gemini analyzes it to estimate calories and
         macros, which get logged automatically. Built with Flask and the Gemini API, with a Postgres
         (Neon) backend in production and a vanilla JS front end.
       </p>
-      <p class="project-detail">
+      <p class="project-detail" data-editable>
         I ran an accuracy evaluation against 50 real dishes from the Nutrition5k dataset and used the
         results to fix a systematic bias in the model's prompting — cutting calorie error (MAPE) from
         35.6% to 33.4% and fat error from 177% to 47%. Funded as 1 of 20 teams building for open-source
@@ -86,15 +86,15 @@
 
     <article class="project">
       <div class="project-header">
-        <h3>Antralio Redact</h3>
-        <span class="tag">Tauri · Rust · Python</span>
+        <h3 data-editable>Antralio Redact</h3>
+        <span class="tag" data-editable>Tauri · Rust · Python</span>
       </div>
-      <p>
+      <p data-editable>
         A desktop app that redacts personal information (names, IDs, addresses) from Portuguese rental
         contracts before they're shared or filed. Built with Tauri (Rust shell) and a Python sidecar using
         Presidio, spaCy, and PyMuPDF to detect and black out sensitive text in PDFs.
       </p>
-      <p class="project-detail">
+      <p class="project-detail" data-editable>
         Shipped to a real client through a private Microsoft Store listing — a workaround for the
         client's endpoint-protection policy, which blocked unsigned executables on their Windows Cloud
         PCs. The client updates automatically through the Store.
@@ -106,16 +106,16 @@
 
     <article class="project">
       <div class="project-header">
-        <h3>TributeFlow</h3>
-        <span class="tag">Python · GitHub Actions · Automation</span>
+        <h3 data-editable>TributeFlow</h3>
+        <span class="tag" data-editable>Python · GitHub Actions · Automation</span>
       </div>
-      <p>
+      <p data-editable>
         An automation pipeline for a nonprofit (Charlottesville-Albemarle SPCA) that replaces a manual
         CSV-export-and-git-push workflow with one click. Staff select "Publish to Wall" in a Google
         Sheet, which triggers a GitHub Action that validates the data, deduplicates entries, and
         publishes an updated tribute wall.
       </p>
-      <p class="project-detail">
+      <p class="project-detail" data-editable>
         The client declined to use AI for this step, so I built a deterministic dedup engine instead
         (exact-match on honoree + donor name) with an eval harness (precision/recall/F1 against 18
         labeled cases) to validate it — plus an optional agent-based mode behind the same interface for
@@ -131,7 +131,7 @@
 
 <footer id="contact" class="page contact">
   <div class="wrap">
-    <h2>Contact</h2>
+    <h2 data-editable>Contact</h2>
     <p><a href="mailto:saraakumar06@gmail.com">saraakumar06@gmail.com</a></p>
     <p class="footer-links">
       <a href="https://github.com/saraakumar" target="_blank" rel="noopener">GitHub</a>
@@ -139,6 +139,12 @@
     </p>
   </div>
 </footer>
+
+<div class="edit-toolbar">
+  <button id="edit-toggle" type="button">Edit text</button>
+  <button id="edit-save" type="button" hidden>Save as file&hellip;</button>
+  <span id="edit-hint" class="edit-hint" hidden>Click any text to change it</span>
+</div>
 
 <script src="script.js"></script>
 </body>

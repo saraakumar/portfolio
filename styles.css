@@ -193,3 +193,52 @@ a { color: var(--accent); }
 
 .footer-links a { margin-right: 18px; text-decoration: none; }
 .footer-links a:hover { text-decoration: underline; }
+
+.edit-mode [data-editable] {
+  outline: 1px dashed var(--accent-alt);
+  outline-offset: 3px;
+  cursor: text;
+  border-radius: 3px;
+}
+
+.edit-mode [data-editable]:focus {
+  outline: 2px solid var(--accent);
+  background: var(--bg-alt);
+}
+
+.edit-toolbar {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 8px 10px 8px 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  z-index: 50;
+  font-size: 0.85rem;
+}
+
+.edit-toolbar button {
+  font-family: inherit;
+  font-size: 0.85rem;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 6px 14px;
+  cursor: pointer;
+}
+
+.edit-toolbar button:hover { border-color: var(--accent); }
+
+#edit-save {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.edit-hint { color: var(--text-muted); }
