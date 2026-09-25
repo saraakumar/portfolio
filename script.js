@@ -31,7 +31,7 @@
   showTab(initial);
 
   // --- inline text editing ---
-  var EDIT_KEY = "portfolio-edits-v3";
+  var EDIT_KEY = "portfolio-edits-v4";
   var editableEls = Array.prototype.slice.call(document.querySelectorAll("[data-editable]"));
   var editToggle = document.getElementById("edit-toggle");
   var editSave = document.getElementById("edit-save");
