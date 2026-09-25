@@ -150,7 +150,7 @@ a { color: var(--accent); }
 
 .skills li:not(.skills-label) {
   font-size: 0.85rem;
-  color: var(--accent-alt);
+  color: #1c3d6b;
   background: var(--bg-alt);
   border: 1px solid var(--border);
   border-radius: 999px;
