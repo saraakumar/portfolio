@@ -132,12 +132,17 @@ a { color: var(--accent); }
 
 .profile-body { flex: 1; min-width: 240px; }
 
+.skills-label {
+  font-weight: 600;
+  margin: 20px 0 0;
+}
+
 .skills {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin: 20px 0 0;
+  margin: 8px 0 0;
   padding: 0;
 }
 
