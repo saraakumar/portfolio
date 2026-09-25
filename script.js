@@ -31,7 +31,7 @@
   showTab(initial);
 
   // --- inline text editing ---
-  var EDIT_KEY = "portfolio-edits-v4";
+  var EDIT_KEY = "portfolio-edits-v5";
   var editableEls = Array.prototype.slice.call(document.querySelectorAll("[data-editable]"));
   var editToggle = document.getElementById("edit-toggle");
   var editSave = document.getElementById("edit-save");
@@ -75,7 +75,7 @@
     editToggle.textContent = on ? "Done editing" : "Edit text";
     editSave.hidden = !on;
     editHint.hidden = !on;
-    persistEdits();
+    if (!on) persistEdits();
   }
 
   editableEls.forEach(function (el) {
