@@ -144,13 +144,13 @@ a { color: var(--accent); }
 
 .skills li.skills-label {
   font-weight: 600;
-  color: var(--text);
+  color: #1c3d6b;
   margin-right: 2px;
 }
 
 .skills li:not(.skills-label) {
   font-size: 0.85rem;
-  color: #1c3d6b;
+  color: var(--accent-alt);
   background: var(--bg-alt);
   border: 1px solid var(--border);
   border-radius: 999px;
