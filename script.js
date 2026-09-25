@@ -60,6 +60,12 @@
     } catch (e) {}
   }
 
+  var autoSaveTimer = null;
+  function scheduleAutoSave() {
+    if (autoSaveTimer) clearTimeout(autoSaveTimer);
+    autoSaveTimer = setTimeout(persistEdits, 400);
+  }
+
   function setEditing(on) {
     editing = on;
     editableEls.forEach(function (el) {
@@ -69,8 +75,18 @@
     editToggle.textContent = on ? "Done editing" : "Edit text";
     editSave.hidden = !on;
     editHint.hidden = !on;
-    if (!on) persistEdits();
+    persistEdits();
   }
+
+  editableEls.forEach(function (el) {
+    el.addEventListener("input", function () {
+      if (editing) scheduleAutoSave();
+    });
+  });
+
+  window.addEventListener("beforeunload", function () {
+    if (editing) persistEdits();
+  });
 
   function downloadCurrentPage() {
     var doc = document.documentElement.cloneNode(true);
