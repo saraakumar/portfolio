@@ -15,7 +15,7 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: "Bodoni Moda", "Bodoni MT", Didot, Georgia, serif;
+  font-family: Optima, Candara, "Segoe UI", Calibri, sans-serif;
   line-height: 1.55;
 }
 
