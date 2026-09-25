@@ -9,19 +9,6 @@
   --card-bg: #fffcf3;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #1b1a22;
-    --bg-alt: #22212c;
-    --text: #f3efe4;
-    --text-muted: #b0acc0;
-    --accent: #b3a8f0;
-    --accent-alt: #8fb2ea;
-    --border: #322f40;
-    --card-bg: #22212c;
-  }
-}
-
 * { box-sizing: border-box; }
 
 body {
