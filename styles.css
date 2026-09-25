@@ -194,7 +194,7 @@ a { color: var(--accent); }
 .project-links a:hover { text-decoration: underline; }
 .muted { color: var(--text-muted); font-size: 0.9rem; }
 
-.profile-body p { color: var(--text-muted); max-width: 65ch; }
+.profile-body p { color: var(--text-muted); }
 
 .contact {
   padding-block: 48px 64px;
