@@ -1,7 +1,7 @@
 (function () {
   var pages = document.querySelectorAll(".page");
   var tabLinks = document.querySelectorAll("[data-tab]");
-  var defaultTab = "home";
+  var defaultTab = "about";
 
   function showTab(id) {
     if (!document.getElementById(id)) id = defaultTab;
