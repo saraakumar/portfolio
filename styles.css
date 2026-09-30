@@ -207,8 +207,18 @@ a { color: var(--accent); }
   padding-block: 48px 64px;
 }
 
-.footer-links a { margin-right: 18px; text-decoration: none; }
-.footer-links a:hover { text-decoration: underline; }
+.contact-intro {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  max-width: 60ch;
+  margin: 0 0 24px;
+}
+
+.contact-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
 
 .edit-mode [data-editable] {
   outline: 1px dashed var(--accent-alt);
