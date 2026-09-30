@@ -216,9 +216,12 @@ a { color: var(--accent); }
 
 .contact-links {
   display: flex;
-  justify-content: space-between;
-  gap: 12px;
+  gap: 16px;
   flex-wrap: wrap;
+}
+
+.contact-links .btn {
+  padding: 12px 32px;
 }
 
 .edit-mode [data-editable] {
